@@ -1,0 +1,861 @@
+{
+	"info": {
+		"_postman_id": "c7f7546b-2f1b-4703-a6d9-f0707c3bf061",
+		"name": "Energeek API Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20485022"
+	},
+	"item": [
+		{
+			"name": "Create Job",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Junior Web Programmer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/job",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"job"
+					]
+				},
+				"description": "Create a job role"
+			},
+			"response": [
+				{
+					"name": "Create Job",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Fullstack Web Programmer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/job",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"job"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"name\": \"Junior Web Programmer\",\n        \"created_by\": 1,\n        \"updated_at\": \"2022-10-06T09:56:10.000000Z\",\n        \"created_at\": \"2022-10-06T09:56:10.000000Z\",\n        \"id\": 4\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All Jobs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/job",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"job"
+					]
+				},
+				"description": "Get all job role"
+			},
+			"response": [
+				{
+					"name": "Get All Jobs",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/job",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"job"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"status\": \"success\",\r\n    \"data\": [\r\n        {\r\n            \"id\": 1,\r\n            \"name\": \"Frontend Web Developer\",\r\n            \"created_at\": \"2022-10-06T09:54:48.000000Z\",\r\n            \"updated_at\": \"2022-10-06T09:54:48.000000Z\",\r\n            \"deleted_at\": null,\r\n            \"created_by\": null,\r\n            \"updated_by\": null,\r\n            \"deleted_by\": null\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"name\": \"Backend Web Developer\",\r\n            \"created_at\": \"2022-10-06T09:54:48.000000Z\",\r\n            \"updated_at\": \"2022-10-06T09:54:48.000000Z\",\r\n            \"deleted_at\": null,\r\n            \"created_by\": null,\r\n            \"updated_by\": null,\r\n            \"deleted_by\": null\r\n        },\r\n        {\r\n            \"id\": 3,\r\n            \"name\": \"Fullstack Web Developer\",\r\n            \"created_at\": \"2022-10-06T09:54:48.000000Z\",\r\n            \"updated_at\": \"2022-10-06T09:54:48.000000Z\",\r\n            \"deleted_at\": null,\r\n            \"created_by\": null,\r\n            \"updated_by\": null,\r\n            \"deleted_by\": null\r\n        },\r\n        {\r\n            \"id\": 4,\r\n            \"name\": \"Junior Web Programmer\",\r\n            \"created_at\": \"2022-10-06T09:56:10.000000Z\",\r\n            \"updated_at\": \"2022-10-06T09:56:10.000000Z\",\r\n            \"deleted_at\": null,\r\n            \"created_by\": 1,\r\n            \"updated_by\": null,\r\n            \"deleted_by\": null\r\n        }\r\n    ]\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Job",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : \"1\",\r\n    \"name\" : \"Update Frontend Web Developer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/job",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"job"
+					]
+				},
+				"description": "Update job role"
+			},
+			"response": [
+				{
+					"name": "Update Job",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"1\",\r\n    \"name\" : \"Update Frontend Web Developer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/job",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"job"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"id\" : \"1\",\r\n    \"name\" : \"Update Frontend Web Developer\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Job By Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/job/{{id}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"job",
+						"{{id}}"
+					]
+				},
+				"description": "Get all job data by id"
+			},
+			"response": [
+				{
+					"name": "Get Job By Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/job/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"job",
+								"1"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"status\": \"success\",\r\n    \"data\": {\r\n        \"id\": 1,\r\n        \"name\": \"Update Frontend Web Developer\",\r\n        \"created_at\": \"2022-10-06T03:49:13.000000Z\",\r\n        \"updated_at\": \"2022-10-06T04:04:27.000000Z\"\r\n    }\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Job",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : {{id}}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/job",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"job"
+					]
+				},
+				"description": "Delete job data by id"
+			},
+			"response": [
+				{
+					"name": "Delete Job",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/job",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"job"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"status\": \"success\",\r\n    \"data\": {\r\n        \"id\": 1,\r\n        \"name\": \"Update Frontend Web Developer\",\r\n        \"created_at\": \"2022-10-06T09:54:48.000000Z\",\r\n        \"updated_at\": \"2022-10-06T10:05:19.000000Z\",\r\n        \"deleted_at\": \"2022-10-06T10:05:19.000000Z\",\r\n        \"created_by\": null,\r\n        \"updated_by\": 1,\r\n        \"deleted_by\": 1\r\n    }\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Skill",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"MongoDB\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/skill",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"skill"
+					]
+				},
+				"description": "Create skill for candidate"
+			},
+			"response": [
+				{
+					"name": "Create Skill",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"MongoDB\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/skill",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"skill"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"name\": \"MongoDB\",\n        \"created_by\": 1,\n        \"updated_at\": \"2022-10-06T10:06:24.000000Z\",\n        \"created_at\": \"2022-10-06T10:06:24.000000Z\",\n        \"id\": 4\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All Skills",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/skill",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"skill"
+					]
+				},
+				"description": "Get all candidate's skill"
+			},
+			"response": [
+				{
+					"name": "Get All Skills",
+					"originalRequest": {
+						"method": "GET",
+						"header": []
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Postgre\",\n            \"created_at\": \"2022-10-06T09:54:48.000000Z\",\n            \"updated_at\": \"2022-10-06T09:54:48.000000Z\",\n            \"deleted_at\": null,\n            \"created_by\": null,\n            \"updated_by\": null,\n            \"deleted_by\": null\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Laravel\",\n            \"created_at\": \"2022-10-06T09:54:48.000000Z\",\n            \"updated_at\": \"2022-10-06T09:54:48.000000Z\",\n            \"deleted_at\": null,\n            \"created_by\": null,\n            \"updated_by\": null,\n            \"deleted_by\": null\n        },\n        {\n            \"id\": 3,\n            \"name\": \"PHP\",\n            \"created_at\": \"2022-10-06T09:54:48.000000Z\",\n            \"updated_at\": \"2022-10-06T09:54:48.000000Z\",\n            \"deleted_at\": null,\n            \"created_by\": null,\n            \"updated_by\": null,\n            \"deleted_by\": null\n        },\n        {\n            \"id\": 4,\n            \"name\": \"MongoDB\",\n            \"created_at\": \"2022-10-06T10:06:24.000000Z\",\n            \"updated_at\": \"2022-10-06T10:06:24.000000Z\",\n            \"deleted_at\": null,\n            \"created_by\": 1,\n            \"updated_by\": null,\n            \"deleted_by\": null\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Skill By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/skill/{{id}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"skill",
+						"{{id}}"
+					]
+				},
+				"description": "Get skill by id"
+			},
+			"response": [
+				{
+					"name": "Get Skill By Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/skill/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"skill",
+								"1"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"status\": \"success\",\r\n    \"data\": {\r\n        \"id\": 1,\r\n        \"name\": \"Postgre\",\r\n        \"created_at\": \"2022-10-06T09:54:48.000000Z\",\r\n        \"updated_at\": \"2022-10-06T09:54:48.000000Z\",\r\n        \"deleted_at\": null,\r\n        \"created_by\": null,\r\n        \"updated_by\": null,\r\n        \"deleted_by\": null\r\n    }\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Skill",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : \"1\",\r\n    \"name\" : \"Update Postgre\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/skill",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"skill"
+					]
+				},
+				"description": "Update skill"
+			},
+			"response": [
+				{
+					"name": "Update Skill",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"1\",\r\n    \"name\" : \"Update Postgre\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/skill",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"skill"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"status\": \"success\",\r\n    \"data\": {\r\n        \"id\": 1,\r\n        \"name\": \"Update Postgre\",\r\n        \"created_at\": \"2022-10-06T09:54:48.000000Z\",\r\n        \"updated_at\": \"2022-10-06T10:09:26.000000Z\",\r\n        \"deleted_at\": null,\r\n        \"created_by\": null,\r\n        \"updated_by\": 1,\r\n        \"deleted_by\": null\r\n    }\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Skill",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : {{id}}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/skill",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"skill"
+					]
+				},
+				"description": "Delete skill"
+			},
+			"response": [
+				{
+					"name": "Delete Skill",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/skill",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"skill"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"status\": \"success\",\r\n    \"data\": {\r\n        \"id\": 1,\r\n        \"name\": \"Update Postgre\",\r\n        \"created_at\": \"2022-10-06T09:54:48.000000Z\",\r\n        \"updated_at\": \"2022-10-06T10:10:13.000000Z\",\r\n        \"deleted_at\": \"2022-10-06T10:10:13.000000Z\",\r\n        \"created_by\": null,\r\n        \"updated_by\": 1,\r\n        \"deleted_by\": null\r\n    }\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Candidate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Candidate2\",\r\n    \"email\" : \"Candidate2@gmail.com\",\r\n    \"phone\" : \"085848039302\",\r\n    \"year\" : \"2031\",\r\n    \"job_id\" : \"1\",\r\n    \"skill_sets\" : [\"2\",\"3\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/candidate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"candidate"
+					]
+				},
+				"description": "Create new candidate's data"
+			},
+			"response": [
+				{
+					"name": "Create Candidate",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Candidate2\",\r\n    \"email\" : \"Candidate2@gmail.com\",\r\n    \"phone\" : \"085848039302\",\r\n    \"year\" : \"2031\",\r\n    \"job_id\" : \"1\",\r\n    \"skill_sets\" : [\"2\",\"3\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/candidate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"candidate"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"status\": \"success\",\r\n    \"data\": {\r\n        \"job_id\": \"1\",\r\n        \"name\": \"Candidate2\",\r\n        \"email\": \"Candidate2@gmail.com\",\r\n        \"phone\": \"085848039302\",\r\n        \"year\": \"2031\",\r\n        \"created_by\": 1,\r\n        \"updated_at\": \"2022-10-06T10:12:30.000000Z\",\r\n        \"created_at\": \"2022-10-06T10:12:30.000000Z\",\r\n        \"id\": 2\r\n    }\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All Candidates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/candidate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"candidate"
+					]
+				},
+				"description": "Get all candidate data"
+			},
+			"response": [
+				{
+					"name": "Get All Candidates",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/candidate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"candidate"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"status\": \"success\",\r\n    \"data\": [\r\n        {\r\n            \"id\": 1,\r\n            \"name\": \"Candidate\",\r\n            \"email\": \"Candidate@gmail.com\",\r\n            \"phone\": \"085848039301\",\r\n            \"year\": 2031,\r\n            \"created_at\": \"2022-10-06T10:11:50.000000Z\",\r\n            \"updated_at\": \"2022-10-06T10:11:50.000000Z\",\r\n            \"deleted_at\": null,\r\n            \"job_id\": 1,\r\n            \"created_by\": 1,\r\n            \"updated_by\": null,\r\n            \"deleted_by\": null\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"name\": \"Candidate2\",\r\n            \"email\": \"Candidate2@gmail.com\",\r\n            \"phone\": \"085848039302\",\r\n            \"year\": 2031,\r\n            \"created_at\": \"2022-10-06T10:12:30.000000Z\",\r\n            \"updated_at\": \"2022-10-06T10:12:30.000000Z\",\r\n            \"deleted_at\": null,\r\n            \"job_id\": 1,\r\n            \"created_by\": 1,\r\n            \"updated_by\": null,\r\n            \"deleted_by\": null\r\n        }\r\n    ]\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Candidate By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/candidate/{{id}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"candidate",
+						"{{id}}"
+					]
+				},
+				"description": "Get candidate's data by id"
+			},
+			"response": [
+				{
+					"name": "Get Candidate By Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/candidate/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"candidate",
+								"1"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"status\": \"success\",\r\n    \"data\": {\r\n        \"id\": 1,\r\n        \"name\": \"Candidate\",\r\n        \"email\": \"Candidate@gmail.com\",\r\n        \"phone\": \"085848039301\",\r\n        \"year\": 2031,\r\n        \"created_at\": \"2022-10-06T10:11:50.000000Z\",\r\n        \"updated_at\": \"2022-10-06T10:11:50.000000Z\",\r\n        \"deleted_at\": null,\r\n        \"job_id\": 1,\r\n        \"created_by\": 1,\r\n        \"updated_by\": null,\r\n        \"deleted_by\": null\r\n    }\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Candidate",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Candidate Update\",\r\n    \"email\": \"update@email.com\",\r\n    \"phone\": \"08812323121\",\r\n    \"year\": 2022,\r\n    \"job_id\": \"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/candidate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"candidate"
+					]
+				},
+				"description": "Update candidate data"
+			},
+			"response": [
+				{
+					"name": "Update Candidate",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Candidate Update\",\r\n    \"email\": \"update@email.com\",\r\n    \"phone\": \"08812323121\",\r\n    \"year\": 2022,\r\n    \"job_id\": \"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/candidate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"candidate"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Candidate Update\",\n        \"email\": \"update@email.com\",\n        \"phone\": \"08812323121\",\n        \"year\": 2022,\n        \"created_at\": \"2022-10-06T10:11:50.000000Z\",\n        \"updated_at\": \"2022-10-06T10:14:49.000000Z\",\n        \"deleted_at\": null,\n        \"job_id\": \"2\",\n        \"created_by\": 1,\n        \"updated_by\": 1,\n        \"deleted_by\": null\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Candidate",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : {{id}}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/candidate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"candidate"
+					]
+				},
+				"description": "Delete candidate data"
+			},
+			"response": [
+				{
+					"name": "Delete Candidate",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/candidate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"candidate"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"status\": \"success\",\r\n    \"data\": {\r\n        \"id\": 1,\r\n        \"name\": \"Candidate Update\",\r\n        \"email\": \"update@email.com\",\r\n        \"phone\": \"08812323121\",\r\n        \"year\": 2022,\r\n        \"created_at\": \"2022-10-06T10:11:50.000000Z\",\r\n        \"updated_at\": \"2022-10-06T10:15:34.000000Z\",\r\n        \"deleted_at\": \"2022-10-06T10:15:34.000000Z\",\r\n        \"job_id\": 2,\r\n        \"created_by\": 1,\r\n        \"updated_by\": 1,\r\n        \"deleted_by\": 1\r\n    }\r\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1"
+		}
+	]
+}
