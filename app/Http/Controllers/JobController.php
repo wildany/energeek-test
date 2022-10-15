@@ -3,12 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Models\job;
+use App\Services\JobService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
 class JobController extends Controller
 {
+
+    public function __construct(private JobService $jobService)
+    {
+    }
+
     public function createJob(Request $request): JsonResponse
     {
 
@@ -26,79 +32,17 @@ class JobController extends Controller
             ]);
         }
 
-        $name = $request->input('name');
-        $creator = (int)$request->header('Guest');
-        $data = job::create(['name' => $name, 'created_by' => $creator]);
-        $status = "";
-        $statusCode = 0;
-
-        if ($data) {
-            $status = 'success';
-            $statusCode = 201;
-        } else {
-            $status = 'failed';
-            $statusCode = 400;
-        }
-
-        $response = response()->json(
-            [
-                'status' => $status,
-                'data' => $data,
-            ],
-            $statusCode
-        );
-
-        return $response;
+        return $this->jobService->createJob($request);
     }
 
     public function getAllJob(): JsonResponse
     {
-        $data = job::all();
-        $status = "";
-        $statusCode = 0;
-
-        if ($data) {
-            $status = "success";
-            $statusCode = "200";
-        } else {
-            $status = "failed";
-            $statusCode = "404";
-        }
-
-        $response = response()->json(
-            [
-                'status' => $status,
-                'data' => $data,
-            ],
-            $statusCode
-        );
-
-        return $response;
+        return $this->jobService->getAllJob();
     }
 
     public function getJobById($id): JsonResponse
     {
-        $data = job::find($id);
-        $status = "";
-        $statusCode = 0;
-
-        if ($data) {
-            $status = "success";
-            $statusCode = "200";
-        } else {
-            $status = "failed";
-            $statusCode = "404";
-        }
-
-        $response = response()->json(
-            [
-                'status' => $status,
-                'data' => $data,
-            ],
-            $statusCode
-        );
-
-        return $response;
+        return $this->jobService->getJobById($id);
     }
 
     public function updateJob(Request $request): JsonResponse
@@ -118,30 +62,7 @@ class JobController extends Controller
             ]);
         }
 
-        $id = $request->input('id');
-        $name = $request->input('name');
-        $updater = (int)$request->header('Guest');
-        $data = job::find($id);
-        $status = "";
-        $statusCode = 0;
-        if ($data) {
-            $data->update(['id' => $id, 'name' => $name, 'updated_by' => $updater]);
-            $status = "success";
-            $statusCode = "200";
-        } else {
-            $status = "failed";
-            $statusCode = 400;
-        }
-
-        $response = response()->json(
-            [
-                'status' => $status,
-                'data' => $data,
-            ],
-            $statusCode
-        );
-
-        return $response;
+        return $this->jobService->updateJob($request);
     }
 
     public function deleteJob(Request $request): JsonResponse
@@ -161,31 +82,6 @@ class JobController extends Controller
             ]);
         }
 
-        $id = $request->input('id');
-        $destroyer = (int)$request->header('Guest');
-        $data = job::find($id);
-        $status = "";
-        $statusCode = 0;
-
-        if ($data) {
-            $data->delete(['id' => $id]);
-            $data->update([
-                'deleted_by' => $destroyer
-            ]);
-            $status = "success";
-            $statusCode = "200";
-        } else {
-            $status = "failed";
-            $statusCode = 400;
-        }
-
-        $response = response()->json(
-            [
-                'status' => $status,
-                'data' => $data,
-            ],
-            $statusCode
-        );
-        return $response;
+        return $this->jobService->deleteJob($request);
     }
 }
